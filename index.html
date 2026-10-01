@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Black Dia das Crianças | Loja de Brinquedos</title>
+  <meta name="description" content="Ofertas especiais de brinquedos na Black Dia das Crianças. Aproveite!">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="#" class="logo">
+        <span>🧸</span>
+        Brinca<span>Kids</span>
+      </a>
+
+      <button class="cart-button" onclick="abrirCarrinho()">
+        🛒 Carrinho
+        <span id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+        <span class="campaign-tag">🔥 OFERTA ESPECIAL</span>
+
+        <h1>
+          BLACK<br>
+          <strong>DIA DAS CRIANÇAS</strong>
+        </h1>
+
+        <p>
+          Os brinquedos que a criançada ama
+          com preços que cabem no bolso!
+        </p>
+
+        <a href="#ofertas" class="hero-button">
+          🛍️ VER OFERTAS
+        </a>
+
+        <div class="mini-info">
+          <div>
+            <strong>🔥</strong>
+            <span>Ofertas especiais</span>
+          </div>
+
+          <div>
+            <strong>📦</strong>
+            <span>Entrega rápida</span>
+          </div>
+
+          <div>
+            <strong>💬</strong>
+            <span>Pedido pelo WhatsApp</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-toy">
+        <div class="discount-circle">
+          ATÉ<br>
+          <strong>50%</strong><br>
+          OFF
+        </div>
+
+        <div class="toy-emoji">🧸</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- BANNER -->
+  <section class="campaign-banner">
+    <div class="container">
+      <span>⚡</span>
+      <strong>BLACK DIA DAS CRIANÇAS</strong>
+      <span>⚡</span>
+      <p>Estoque limitado • Aproveite enquanto durar!</p>
+    </div>
+  </section>
+
+
+  <!-- OFERTAS -->
+  <section class="products-section" id="ofertas">
+    <div class="container">
+
+      <div class="section-title">
+        <span>🎁 OFERTAS DA BLACK</span>
+        <h2>Escolha os favoritos da criançada</h2>
+        <p>Adicione os produtos ao carrinho e finalize seu pedido pelo WhatsApp.</p>
+      </div>
+
+      <div class="products-grid" id="products-grid">
+        <!-- Produtos inseridos pelo JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- BENEFÍCIOS -->
+  <section class="benefits">
+    <div class="container">
+
+      <div class="benefit">
+        <div class="benefit-icon">🚚</div>
+        <h3>Entrega rápida</h3>
+        <p>Receba seus brinquedos com segurança.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">💳</div>
+        <h3>Pagamento fácil</h3>
+        <p>Combine a forma de pagamento pelo WhatsApp.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">💬</div>
+        <h3>Atendimento</h3>
+        <p>Fale diretamente com nossa equipe.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">🎁</div>
+        <h3>Presentes especiais</h3>
+        <p>Encontre o presente perfeito para a criançada.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="cta-content">
+        <span>🎉</span>
+
+        <h2>
+          O presente perfeito<br>
+          está esperando!
+        </h2>
+
+        <p>
+          Aproveite as ofertas da Black Dia das Crianças.
+        </p>
+
+        <a href="#ofertas" class="cta-button">
+          QUERO APROVEITAR 🔥
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">🧸 BrincaKids</div>
+
+      <p>
+        © 2026 BrincaKids. Todos os direitos reservados.
+      </p>
+
+      <small>
+        Black Dia das Crianças • Ofertas por tempo limitado
+      </small>
+    </div>
+  </footer>
+
+
+  <!-- CARRINHO -->
+  <div class="cart-overlay" id="cart-overlay" onclick="fecharCarrinho(event)">
+
+    <div class="cart-modal" onclick="event.stopPropagation()">
+
+      <div class="cart-header">
+        <h2>🛒 Seu pedido</h2>
+
+        <button onclick="fecharCarrinho()" class="close-cart">
+          ×
+        </button>
+      </div>
+
+      <div id="cart-items" class="cart-items">
+        <!-- Carrinho -->
+      </div>
+
+      <div class="cart-empty" id="cart-empty">
+        <span>🧸</span>
+        <p>Seu carrinho está vazio.</p>
+        <button onclick="fecharCarrinho()">
+          Ver ofertas
+        </button>
+      </div>
+
+      <div class="cart-footer" id="cart-footer">
+
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cart-total">R$ 0,00</strong>
+        </div>
+
+        <div class="customer-data">
+
+          <label>Seu nome</label>
+          <input
+            type="text"
+            id="customer-name"
+            placeholder="Digite seu nome"
+          >
+
+          <label>Observação <small>(opcional)</small></label>
+          <textarea
+            id="customer-note"
+            placeholder="Ex.: Quero retirar na loja..."
+          ></textarea>
+
+        </div>
+
+        <button
+          class="whatsapp-button"
+          onclick="finalizarWhatsApp()"
+        >
+          <span>💬</span>
+          FINALIZAR PELO WHATSAPP
+        </button>
+
+        <small class="secure-text">
+          🔒 Seu pedido será enviado diretamente para nossa equipe.
+        </small>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
